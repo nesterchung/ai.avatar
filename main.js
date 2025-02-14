@@ -17,7 +17,7 @@ scene.add(light);
 const loader = new GLTFLoader();
 loader.register((parser) => new VRMLoaderPlugin(parser));
 
-loader.load('/avatar.vrm', (gltf) => {
+loader.load('public/avatar.vrm', (gltf) => {
     const vrm = gltf.userData.vrm;
     scene.add(vrm.scene);
     console.log('VRM 模型載入成功！');
